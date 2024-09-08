@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket game</title>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>Bat Ball Wicket Game</h1>
+    </header>
+    <h5>Select from Bat,Ball or Stump</h5>
+    <button onclick="
+    generate()
+    if(computerchoice=='Ball'){
+        alert('You won');
+    } else if (computerchoice=='Stump'){
+        alert('You lose');
+    } else{
+        alert('Match tied');
+    }
+    ">Bat</button>
+
+    <button onclick="
+    generate()
+    if(computerchoice=='Ball'){
+        alert('Match tied');
+    } else if (computerchoice=='Stump'){
+        alert('You Won');
+    } else{
+        alert('You Lose');
+    }
+    ">Ball</button>
+
+    <button onclick="
+    generate()
+    if(computerchoice=='Ball'){
+        alert('You Lose');
+    } else if (computerchoice=='Stump'){
+        alert('Match tied');
+    } else{
+        alert('You Won');
+    }
+    ">Stumps</button>
+
+    <script>
+        let computerchoice='';
+        function generate(){
+            let randomnumber=Math.random()*3;
+            if (randomnumber>0 && randomnumber<=1){
+                computerchoice='Bat';
+                 } else if(randomnumber>1 && randomnumber<=2){
+                         computerchoice='Ball';
+                    } else{
+                         computerchoice='Stump';
+                      }
+                    }
+    </script>
+</body>
+</html>
